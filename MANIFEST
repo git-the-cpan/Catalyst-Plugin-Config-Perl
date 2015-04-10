@@ -8,6 +8,7 @@ t/02-pod.t
 t/03-basic.t
 t/04-with-local.t
 t/05-custom-file.t
+t/06-reload.t
 t/app1/conf/testapp.conf
 t/app1/lib/TestApp.pm
 t/app2/conf/testapp.conf

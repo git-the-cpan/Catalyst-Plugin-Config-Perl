@@ -13,6 +13,11 @@ See L<Panda::Config::Perl> for synopsis of config files.
     $cfg = $myapp->config;
     $cfg = $myapp->cfg; # the same but much faster
     if ($myapp->dev) { ... } # alias for $myapp->cfg->{dev}
+    
+    ...
+    
+    $c->config_reload; # read configs again
+    my $fresh_config = $c->cfg;
 
 =head1 DESCRIPTION
 
@@ -33,17 +38,25 @@ This plugin is a new version of L<Catalyst::Plugin::ConfigLoader::MultiState>.
 
 =item dev
 
-    Development server flag. $c->dev is true if current installation is development.
-    Also available through $c->cfg->{dev}.
+Development server flag. $c->dev is true if current installation is development.
+Also available through $c->cfg->{dev}.
 
 =item cfg
 
-    Fast accessor for getting config hash.
-    It is 30x faster than original ->config accessor.
+Fast accessor for getting config hash.
+It is 30x faster than original ->config accessor.
+
+=item config_reload
+
+Reads configs again using the same initial config as it was for the first time. Updates $c->config and $c->cfg.
+
+=item config_initial
+
+The content of $c->config before the first processing of configs. You can change it to C<reload> configs using another initial values.
 
 =item setup
 
-    Called by catalyst at setup phase. Initializes config.
+Called by catalyst at setup phase. Initializes config.
 
 =item finalize_config
 

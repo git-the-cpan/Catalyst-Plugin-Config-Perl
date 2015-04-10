@@ -32,19 +32,19 @@
       "configure" : {
          "requires" : {
             "ExtUtils::MakeMaker" : "6.76",
-            "Panda::Install" : "v1.2.3"
+            "Panda::Install" : "v1.2.4"
          }
       },
       "runtime" : {
          "requires" : {
             "Class::Accessor::Inherited::XS" : "0.07",
             "Panda::Config::Perl" : "0",
-            "Panda::Install" : "v1.2.3",
+            "Panda::Install" : "v1.2.4",
             "Panda::Lib" : "0",
             "perl" : "5.010000"
          }
       }
    },
    "release_status" : "stable",
-   "version" : "v1.0.0"
+   "version" : "v1.0.1"
 }
