@@ -23,9 +23,10 @@ no_index:
     - t
     - inc
 requires:
+  Catalyst::Runtime: '0'
   Class::Accessor::Inherited::XS: '0.07'
   Panda::Config::Perl: '0'
   Panda::Install: v1.2.4
   Panda::Lib: '0'
   perl: '5.010000'
-version: v1.0.1
+version: v1.0.2

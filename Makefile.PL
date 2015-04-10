@@ -9,5 +9,6 @@ write_makefile(
         'Panda::Lib'                     => 0,
         'Panda::Config::Perl'            => 0,
         'Class::Accessor::Inherited::XS' => '0.07',
+        'Catalyst::Runtime'              => 0,
     },
 );

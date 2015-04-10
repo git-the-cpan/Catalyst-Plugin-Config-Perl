@@ -3,7 +3,7 @@ use 5.012;
 use Panda::Lib 'fclone';
 use Panda::Config::Perl;
 
-our $VERSION = '1.0.1';
+our $VERSION = '1.0.2';
 
 use Class::Accessor::Inherited::XS inherited => [qw/cfg dev config_initial/];
 
