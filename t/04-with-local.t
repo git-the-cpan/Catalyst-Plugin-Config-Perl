@@ -18,6 +18,8 @@ is($cfg->{local_here}, 1);
 is($cfg->{s}, 123);
 cmp_deeply($cfg->{a}, [1,2,3]);
 cmp_deeply($cfg->{h}, {a => 100, b => 2, c => 3});
+is($cfg->{dev}, undef);
+is(TestApp->dev, undef);
 
 done_testing();
 

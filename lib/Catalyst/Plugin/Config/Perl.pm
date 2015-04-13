@@ -3,7 +3,7 @@ use 5.012;
 use Panda::Lib 'fclone';
 use Panda::Config::Perl;
 
-our $VERSION = '1.0.2';
+our $VERSION = '1.0.3';
 
 use Class::Accessor::Inherited::XS inherited => [qw/cfg dev config_initial/];
 
@@ -43,10 +43,14 @@ sub config_reload {
         $class->setup_finished($old);
         $class->cfg($cfg);
     }
+    
+    $class->dev($class->cfg->{dev});
 
     #print "ConfigSuite Init took ".((Time::HiRes::time() - $start)*1000)."\n";
     my $sub = $class->can('finalize_config');
     $sub->($class) if $sub;
+    
+    $class->dev($class->cfg->{dev});
 }
 
 1;
